@@ -1,0 +1,42 @@
+{
+  "text": {
+    "commonDark": "#1b1d21",
+    "commonWhite": "#ffffff",
+    "natural": "#42474d",
+    "selected": "#573ff5",
+    "secondary": "#878e97",
+    "danger": "#ff4f42",
+    "ghost": "#bbbbbb",
+    "warning": "#F6AD16",
+    "success": "#3C9949",
+    "info": "#b0b6bf"
+  },
+  "background": {
+    "commonDark": "#121212",
+    "commonWhite": "#ffffff",
+    "selected": "#573ff5",
+    "button": "#573ff5",
+    "buttonHover": "rgba(87, 63, 245, 0.7)",
+    "paper": "#fcfcfd",
+    "disabled": "#ebecf0",
+    "warning": "#F6AD16",
+    "danger": "#ffede0",
+    "success": "#3C9949",
+    "info": "#666666"
+  },
+  "border": {
+    "commonDark": "#1b1d21",
+    "commonWhite": "#ffffff",
+    "commonGrey": "#ebecf0",
+    "natural": "#42474d",
+    "selected": "#573ff5",
+    "button": "#573ff5",
+    "disabled": "#ebecf0",
+    "warning": "#F6AD16",
+    "danger": "#ff4f42"
+  },
+  "icon": {
+    "commonDark": "#54545e",
+    "danger": "#ff4f42"
+  }
+}
