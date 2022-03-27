@@ -7,7 +7,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "prepare": "husky install",
-    "commit": "gaa & git cz"
+    "commit": "git add . & git cz"
   },
   "husky": {
     "hooks": {
