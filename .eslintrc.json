@@ -24,6 +24,12 @@
     "react/jsx-one-expression-per-line": "off",
     "react/react-in-jsx-scope": "off",
     "import/extensions": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "no-shadow": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
+    "react/require-default-props": "off"
   }
 }
