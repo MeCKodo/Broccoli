@@ -6,7 +6,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "gaa & git cz"
   },
   "husky": {
     "hooks": {
@@ -113,7 +114,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
-    "jest-watch-typeahead": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -155,6 +155,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "jest-watch-typeahead": "^0.6.5"
   }
 }
