@@ -3,6 +3,7 @@ import { invite } from '@/network/api';
 import { isEmail, isValidUsername } from '@/utils';
 import { FieldType } from './types';
 import { isNetworkError } from '@/network/types';
+import { STATUS_CODE } from '@/network/config';
 
 export const useFieldState = () => {
   const [userInfo, setUserInfo] = useState<Record<FieldType, string>>({
@@ -66,7 +67,9 @@ export const useSubmit = (name: string, email: string) => {
       return true;
     } catch (e) {
       if (isNetworkError<{errorMessage: string}>(e)) {
-        setErrorTip(e.data.errorMessage);
+        if (e.status === STATUS_CODE.BadRequest) {
+          setErrorTip(e.data.errorMessage);
+        }
       } else {
         setErrorTip('someting wrong...');
       }

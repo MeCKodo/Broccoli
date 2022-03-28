@@ -12,7 +12,7 @@ const Button = (props: ButtonProps) => {
     className,
     onClick,
     ...rest
-  } = props as any;
+  } = props;
   const text = loading ? loadingText : children;
 
   const classNameArr = [className, ButtonClassNames.root];
@@ -24,7 +24,7 @@ const Button = (props: ButtonProps) => {
     if (disabled || loading) {
       return;
     }
-    onClick();
+    onClick?.();
   };
 
   return (

@@ -9,6 +9,7 @@ type ButtonProps = {
   loading?: boolean;
   loadingText?: string;
   children: ReactNode | string;
+  className?: string;
 };
 
 export { ButtonProps, ButtonSize };

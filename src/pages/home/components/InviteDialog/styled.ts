@@ -8,6 +8,7 @@ export const StyledButtonWrapper = styled.div`
 
 export const StyledInputWrapper = styled.div`
   /* width: 100%; */
+  text-align: left;
   .${TextFieldClassNames.root} {
     margin-bottom: 24px;
   }
