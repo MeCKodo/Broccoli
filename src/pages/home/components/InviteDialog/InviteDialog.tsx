@@ -10,21 +10,37 @@ type Props = {
   onClose: () => void;
 }
 
+const SuccessDialogContent = (props: { onClick: () => void }) => {
+  const { onClick } = props;
+  return (
+    <>
+      <S.StyledSuccessText>
+        You will be one of the first to experience Broccoli & Co.when we launch.
+      </S.StyledSuccessText>
+      <Button size="large" onClick={onClick}>OK</Button>
+    </>
+  );
+};
+
 const InviteDialog = (props: Props) => {
   const { onSuccess, onClose } = props;
   const {
-    userInfo, infoError, onChange, checkIfInfoValid,
+    userInfo, infoError, onChange, checkIfInfoInvalid,
   } = useFieldState();
   const { sendButtonLoading, errorTip, onSubmit } = useSubmit(userInfo.name, userInfo.email);
 
   const _onSubmit = async () => {
-    const isInfoValid = checkIfInfoValid();
-    if (isInfoValid) {
+    const isInfoInvalid = checkIfInfoInvalid();
+    if (isInfoInvalid) {
       return;
     }
     const res = await onSubmit();
     if (res) {
       onSuccess();
+      const { dismiss } = Dialog.show({
+        title: 'All Done!',
+        children: <SuccessDialogContent onClick={() => dismiss()} />,
+      });
     }
   };
 
@@ -70,6 +86,7 @@ const InviteDialog = (props: Props) => {
           loading={sendButtonLoading}
           loadingText="Sending, please wait..."
           disabled={sendButtonLoading}
+          data-testid="submit-button"
         >
           Send
         </Button>

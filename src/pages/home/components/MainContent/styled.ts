@@ -7,15 +7,11 @@ export const StyledMainContentWrapper = styled.div`
 `;
 
 export const StyledWelcomeStatement = styled.p`
-  ${typography('display3')};
+  ${typography('display2')};
+  padding: 0 0 12px;
 `;
 
 export const StyledMessage = styled.p`
   ${typography('title1')};
-`;
-
-export const StyledSuccessText = styled.p`
-  ${typography('subheading2')};
-  padding: 0 0 40px;
-  text-align: center;
+  padding: 0 0 24px;
 `;

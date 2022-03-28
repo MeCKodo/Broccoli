@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { TextFieldClassNames } from '@/components/TextField';
+import { typography } from '@/components/utils';
 
 export const StyledButtonWrapper = styled.div`
   /* width: 100%; */
@@ -12,4 +13,10 @@ export const StyledInputWrapper = styled.div`
   .${TextFieldClassNames.root} {
     margin-bottom: 24px;
   }
+`;
+
+export const StyledSuccessText = styled.p`
+  ${typography('subheading2')};
+  padding: 0 0 40px;
+  text-align: center;
 `;

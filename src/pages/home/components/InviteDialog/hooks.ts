@@ -32,7 +32,7 @@ export const useFieldState = () => {
     }
   };
 
-  const checkIfInfoValid = () => {
+  const checkIfInfoInvalid = () => {
     let isUserInfoError = false;
     const { email, name, confirmEmail } = userInfo;
 
@@ -52,7 +52,7 @@ export const useFieldState = () => {
   };
 
   return {
-    userInfo, infoError, onChange, checkIfInfoValid,
+    userInfo, infoError, onChange, checkIfInfoInvalid,
   };
 };
 
@@ -66,13 +66,12 @@ export const useSubmit = (name: string, email: string) => {
       await invite(name, email);
       return true;
     } catch (e) {
-      if (isNetworkError<{errorMessage: string}>(e)) {
-        if (e.status === STATUS_CODE.BadRequest) {
-          setErrorTip(e.data.errorMessage);
-        }
+      if (isNetworkError<{errorMessage: string}>(e) && e.status === STATUS_CODE.BadRequest) {
+        setErrorTip(e.data.errorMessage);
       } else {
-        setErrorTip('someting wrong...');
+        setErrorTip('something wrong...');
       }
+
       return false;
     } finally {
       setSendButtonLoading(false);
