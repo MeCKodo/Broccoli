@@ -23,7 +23,6 @@ function palette<
   T extends keyof PaletteNameType,
   P extends keyof NonNullable<PaletteNameType[T]>,
 >(
-  /** name of type, such as 'text'/'border'... */
   typeName: T,
   sub: P,
 ) {
