@@ -24,9 +24,7 @@ function getTypography(name: TypographyStyleType, key: TypographyStyleKey) {
  * typography('body1')
  */
 function typography(
-  /** name of token */
   name: TypographyStyleType,
-  /** if you dont need `line-hight` style */
   fontOnly = false,
 ) {
   const fontCss = css`
