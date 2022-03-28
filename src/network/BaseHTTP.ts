@@ -7,7 +7,7 @@ type RequestConfig = {
   data?: any;
   options?: AxiosRequestConfig;
 };
-(window as any).axios = axios;
+
 class BaseHTTP {
   private readonly _baseUrl?: string;
 

@@ -31,6 +31,7 @@ const StyledMainWrapper = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 32px;
 `;
 
 const StyledFooterWrapper = styled.footer`
